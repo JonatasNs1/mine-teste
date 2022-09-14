@@ -18,25 +18,33 @@ function Cadastro(){
     const [userTelefone, setUserTelefone] = useState()
     const [userEmail, setUserEmail] = useState()
 
- 
+    
   
     function cadastrarUsuario(e){
+       
+    if(nome == null || telefone == null || email == null){
+        alert('Preencha todos os campos')
+    }else{
         e.preventDefault();
         setUserNome(nome);
         setUserTelefone(telefone);
         setUserEmail(email);
+        
        alert(`
                 Seu nome é:${nome}
                 Seu telefone é:${telefone}
                 Seu email é:${email}
                 `)
     }
+    }
+
+
    return(
 
- 
-    
+    <>
+
     <Container customClass="min-height">
-          
+         
         <div className={styles.hello}>
             <div>
                 <Title text="Welcome Back!"/>
@@ -119,9 +127,8 @@ function Cadastro(){
         
         
     </Container>
-    
 
-    
+    </> 
    )
 }
 
