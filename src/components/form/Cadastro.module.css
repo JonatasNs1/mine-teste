@@ -5,27 +5,86 @@
 }
 
 
-body{
-    width: 100%;
-    height: 100vh;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
+
+.image{
+  width: 50%;
+  height: 500px;
+  /* background-image: url(../../imc/fundo.jpg); */
+
+
 }
 
-.container{
-    width: 1200px;
-    height: 80vh;
-    /* display: flex; */
-    box-shadow: 5px 5px 10px rgba(0,0,0.212); 
-    background-color: azure;
+.image img{
+   width: inherit;
+   height: inherit; 
+}
+
+.hello{
+    width: 50%;
+    height: 1000px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+
+}
+
+.titleBvd{
+    color: black;
+    font-family: Nunito, sans-serif;
+    display: block;
+    font-size: 30px;
+    line-height: 1.2;
 }
 
 .cadastro{
-    width: 500px ;
-    height: 80vh;
-    background-color: red;
+    width: 50%;
+    height: auto;
+    background-color:#6A5ACD;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+    /* background-color: aqua; */
 }
+
+
+.loader_container{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* background-color: chartreuse; */
+}
+
+.loader{
+    width: 150px;
+    margin-bottom: 30px;
+
+}
+
+.textCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .txt1 {
+    font-size: 1.8em;
+    color: #adadad;
+    line-height: 1.5;
+    padding-right: 7px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .txt2 {
+    font-size: 1.4em;
+    color: #483D8B;
+    line-height: 1.5;
+    text-decoration: none;
+    padding-left: 8px;
+  }
+
 

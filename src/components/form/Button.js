@@ -1,8 +1,11 @@
-function Button (){
+import styles from './Button.module.css';
+
+
+function Button ({text}){
     return (
-        <>
-            <button> Salvar </button>
-        </>
+        <div className={styles.btnControle}>
+            <button className={styles.btnLogin}> {text} </button>
+        </div>
     )
 }
 

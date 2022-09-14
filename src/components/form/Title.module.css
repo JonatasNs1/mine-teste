@@ -1,0 +1,17 @@
+.title{
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    /* background-color: aquamarine; */
+}
+
+.title h1{
+    font-family: Nunito, sans-serif;
+    display: block;
+    font-size: 1.9em;
+    color: #ffffff;
+    line-height: 1.2;
+    
+}

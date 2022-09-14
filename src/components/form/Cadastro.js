@@ -2,6 +2,11 @@ import {useState} from 'react';
 import Button from './Button';
 import Input from './Input';
 import styles from './Cadastro.module.css';
+import play from '../../imc/PlayStation.svg';
+import Container from '../layout/Container';
+import Title from './Title';
+import Label from './Label';
+
 
 function Cadastro(){
 
@@ -21,42 +26,83 @@ function Cadastro(){
     }
 
    return(
-    <div className={styles.container}>
+
+
+
+    
+    <Container customClass="min-height">
+        <div className={styles.hello}>
+            <div>
+                <Title text="Welcome Back!"/>
+            </div>
+            <div>
+               <p>To kepp connected with us please login with your personal info</p>
+            </div>
+            <div>
+            <Button text="sing-in"/>
+            </div>
+        </div>
+
       <div className={styles.cadastro}>
         <form onSubmit={cadastrarUsuario}>
-                <div>
-                    <Input
-                    text="nome" 
-                    name="nome"
-                    type="text"
-                    placeholder="Digite seu nome" 
-                    onChange={(e) => setNome(e.target.value)} 
-                    />
+               <div>
+                   <Title text="Create Account"/>
+               </div>
+               <div className={styles.loader_container}>
+                    <img className={styles.loader} src={play} alt="Logo" />
+                    {/* <p> aaaaa</p> */}
                 </div>
+              
+
+                        <Label
+                            htmlFor="nome"
+                            text="Nome"
+                        />
+                        <Input
+                            text="nome" 
+                            name="nome"
+                            type="text"
+                            placeholder="Digite seu nome" 
+                            onChange={(e) => setNome(e.target.value)} 
+                        />
+                        <Label
+                            htmlFor="telefone"
+                            text="Telefone"
+                        />
+                                    
+                        <Input
+                            text="telefone"
+                            name="telefone" 
+                            type="number" 
+                            placeholder="Digite seu número"
+                            onChange={(e) => setTelefone(e.target.value)}
+                        
+                        />
+                       
+                       <Label
+                            htmlFor="email"
+                            text="Email"
+                        />
+
+                        <Input
+                            text="email"
+                            type="email" 
+                            name="email" 
+                            placeholder="Digite seu email"
+                            onChange={(e) => setEmail(e.target.value)}
+                        
+                        /> 
+                
                 <div>
-                    <Input
-                        text="telefone"
-                        name="telefone" 
-                        type="number" 
-                        placeholder="Digite seu número"
-                        onChange={(e) => setTelefone(e.target.value)}
-                    
-                    />
+                    <Button text="Sing-up"/>
                 </div>
-                <div>
-                    <Input
-                        text="email"
-                        type="email" 
-                        name="email" 
-                        placeholder="Digite seu email"
-                        onChange={(e) => setEmail(e.target.value)}
-                    
-                    />
-                </div>
-            
-                <div>
-                    <Button/>
-                </div>
+
+                <div className={styles.textCenter}>
+                    <span className={styles.txt1}>Não possui conta? </span>
+                <a className={styles.txt2} href="#">
+                     Criar conta
+                </a>
+            </div>
 
             </form>
       </div>
@@ -88,7 +134,9 @@ function Cadastro(){
 
 
         
-    </div>
+    </Container>
+
+    
    )
 }
 
