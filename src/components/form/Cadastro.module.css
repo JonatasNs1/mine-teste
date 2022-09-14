@@ -20,19 +20,39 @@
 }
 
 .hello{
-    width: 50%;
-    height: 1000px;
-    background-color: #ecf0f1;
-    border-radius: 10px;
-
+  width: 50%;
+  height: auto;
+  background-color:#ecf0f1;
+border-radius: 10px;
+overflow: hidden;
+padding: 77px 55px 33px 55px;
+margin: auto;
+  /* background-color: aqua; */
+   
+}
+.dTitle{
+  width: 100%;
+  /* background-color: #483D8B; */
+  color: black;
+  /* margin-top: 30px; */
+/* margin-top: auto; */
 }
 
-.titleBvd{
-    color: black;
-    font-family: Nunito, sans-serif;
-    display: block;
-    font-size: 30px;
-    line-height: 1.2;
+.texto{
+  /* background-color: #6A5ACD; */
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+  font-size: 1.8em;
+  padding-left:50px ;
+  padding-top: 10px;
+}
+
+
+.btnSingIn{
+  width: 100%;
+  /* background-color: #6A5ACD; */
+  margin-top: -100px;
 }
 
 .cadastro{

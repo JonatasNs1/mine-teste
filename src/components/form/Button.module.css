@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 13px;
+    margin-top: auto;
   }
   
   .btnLogin {

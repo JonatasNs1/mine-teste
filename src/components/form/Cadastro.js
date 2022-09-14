@@ -46,21 +46,21 @@ function Cadastro(){
     <Container customClass="min-height">
          
         <div className={styles.hello}>
-            <div>
-                <Title text="Welcome Back!"/>
+            <div className={styles.dTitle}>
+                <Title  text="Welcome Back!" type="titleBemVindo"/>
             </div>
-            <div>
+            <div className={styles.texto}>
                <p>To kepp connected with us please login with your personal info</p>
             </div>
-            <div>
+            <div className={styles.btnSingIn}>
             <Button text="sing-in"/>
             </div>
         </div>
 
       <div className={styles.cadastro}>
         <form onSubmit={cadastrarUsuario}>
-               <div>
-                   <Title text="Create Account"/>
+               <div className={styles.titleBvd}>
+                   <Title text="Create Account"  type="titleCadastro"/>
                </div>
                <div className={styles.loader_container}>
                     <img className={styles.loader} src={play} alt="Logo" />
