@@ -17,7 +17,7 @@ import {
     DivTextCenter,
     SpanText1,
     SpanText2,
-    Spannn
+    DivMessage
 } from './Cadastro.module';
 
 import { useForm } from 'react-hook-form';
@@ -98,7 +98,9 @@ function Cadastro() {
                               placeholder="Digite seu nome"
                             />
                     
-                        <Spannn>{errors.nome?.message}</Spannn>
+                        <DivMessage>
+                            <span>{errors.nome?.message}</span>
+                        </DivMessage>
                         <Label
                             htmlFor="telefone"
                             text="Telefone"
@@ -111,7 +113,9 @@ function Cadastro() {
                              placeholder="Digite seu telefone"
                            />
                      
-                        <Spannn>{errors.telefone?.message}</Spannn>
+                        <DivMessage>
+                            <span>{errors.telefone?.message}</span>
+                        </DivMessage>
 
                         <Label
                             htmlFor="email"
@@ -123,8 +127,10 @@ function Cadastro() {
                             type="email"
                             placeholder="Digite seu email"
                         /> 
-
-                        <Spannn>{errors.email?.message}</Spannn>
+                        <DivMessage>
+                            <span>{errors.email?.message}</span>
+                        </DivMessage>
+                      
                         <DivBtnSingUp>
 
                             <Button text="Sing-up" />

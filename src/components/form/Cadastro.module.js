@@ -121,10 +121,17 @@ export const TitleBemVindo = styled.h1`
 
 `;
 
-export const Spannn = styled.span`
+export const DivMessage = styled.div`
    width: 100%;
-   height: 100px;
-   background-color: red;
+   height:50px;
+   margin-top: -20px;
+   margin-bottom: 15px;
+ span{
+    font-size: 1.7em;
+     font-weight: bold;
+
+   color: red;
+ }
 
 `;
 
