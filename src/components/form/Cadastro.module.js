@@ -121,6 +121,14 @@ export const TitleBemVindo = styled.h1`
 
 `;
 
+export const Spannn = styled.span`
+   width: 100%;
+   height: 100px;
+   background-color: red;
+
+`;
+
+
 
 
 

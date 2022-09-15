@@ -1,16 +1,23 @@
 // import styles from './Input.module.css';
+import { forwardRef } from 'react';
 import {DivInputs, Inputs } from './Input.module';
-function Input({ nome, type, placeholder, text, onChange}){
+
+// const Input  = forwardRef((props, ) =>{
+//     return (
+//         <DivInputs>
+//              <Inputs 
+//                 ref={register}
+//                 />
+//         </DivInputs>
+//     )
+// })
+import React from 'react';
+const Input = forwardRef((props, ref) => {
     return (
         <DivInputs>
-             <Inputs 
-                text={text}
-                name={nome}
-                type={type}
-                placeholder={placeholder}
-                onChange={onChange} />
+            <Inputs ref={ref} {...props} />
         </DivInputs>
     )
-}
+  });
 
 export default Input;
