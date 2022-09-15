@@ -18,27 +18,3 @@ body {
     background-repeat: no-repeat;
     /* background: #0c0ce94d; */
 }
-.container{
-    width: 1400px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: #ecf0f1;
-    flex-wrap: wrap;
-}
-
-.min-height{
-    min-height: 100%;
-}
-
-.start{
-    justify-content: flex-start;
-
-}
-
-.column{
-    flex-direction: column;
-    justify-content: flex-start;
-}

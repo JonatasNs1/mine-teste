@@ -1,12 +1,22 @@
 import {useState} from 'react';
 import Button from './Button';
 import Input from './Input';
-import styles from './Cadastro.module.css';
 import play from '../../imc/PlayStation.svg';
 import Container from '../layout/Container';
 import Title from './Title';
 import Label from './Label';
-
+import {DivTexto, 
+        DivBtnSingUp,
+        DivImage,
+        DivBemVindo,
+        DivTitulo,
+        Hello, 
+        DivBtnSingIn,
+        DivCadastro,
+        DivTextCenter,
+        SpanText1,
+        SpanText2,
+        Body} from './Cadastro.module';
 
 
 function Cadastro(){
@@ -19,7 +29,6 @@ function Cadastro(){
     const [userEmail, setUserEmail] = useState()
 
     
-  
     function cadastrarUsuario(e){
        
     if(nome == null || telefone == null || email == null){
@@ -31,9 +40,9 @@ function Cadastro(){
         setUserEmail(email);
         
        alert(`
-                Seu nome é:${nome}
-                Seu telefone é:${telefone}
-                Seu email é:${email}
+                Seu nome é: ${nome}
+                Seu telefone é: ${telefone}
+                Seu email é: ${email}
                 `)
     }
     }
@@ -42,90 +51,77 @@ function Cadastro(){
    return(
 
     <>
-
+    
     <Container customClass="min-height">
          
-        <div className={styles.hello}>
-            <div className={styles.dTitle}>
-                <Title  text="Welcome Back!" type="titleBemVindo"/>
-            </div>
-            <div className={styles.texto}>
+        <Hello>
+            <DivTitulo>
+                <Title  text="Welcome Back!"/>
+            </DivTitulo>
+            <DivTexto>
                <p>To kepp connected with us please login with your personal info</p>
-            </div>
-            <div className={styles.btnSingIn}>
-            <Button text="sing-in"/>
-            </div>
-        </div>
+            </DivTexto>
+            <DivBtnSingIn >
+                <Button text="Sing-in"/>
+            </DivBtnSingIn>
+        </Hello>
 
-      <div className={styles.cadastro}>
+      <DivCadastro >
         <form onSubmit={cadastrarUsuario}>
-               <div className={styles.titleBvd}>
-                   <Title text="Create Account"  type="titleCadastro"/>
-               </div>
-               <div className={styles.loader_container}>
-                    <img className={styles.loader} src={play} alt="Logo" />
-                    {/* <p> aaaaa</p> */}
-                </div>
-              
-
-                        <Label
-                            htmlFor="nome"
-                            text="Nome"
-                        />
-                        <Input
-                            text="nome" 
-                            name="nome"
-                            type="text"
-                            placeholder="Digite seu nome" 
-                            onChange={(e) => setNome(e.target.value)} 
-                        />
-                        <Label
-                            htmlFor="telefone"
-                            text="Telefone"
-                        />
-                                    
-                        <Input
-                            text="telefone"
-                            name="telefone" 
-                            type="number" 
-                            placeholder="Digite seu telefone"
-                            onChange={(e) => setTelefone(e.target.value)}
-                        
-                        />
-                       
-                       <Label
-                            htmlFor="email"
-                            text="Email"
-                        />
-
-                        <Input
-                            text="email"
-                            type="email" 
-                            name="email" 
-                            placeholder="Digite seu email"
-                            onChange={(e) => setEmail(e.target.value)}
-                        
-                        /> 
+            <DivBemVindo>
+                <Title text="Create Account" />
+            </DivBemVindo>
+            <DivImage>
+                 <img src={play} alt="Logo" />
+            </DivImage>
+            <Label
+                htmlFor="nome"
+                text="Nome"
+            />
+            <Input
+                text="nome" 
+                name="nome"
+                type="text"
+                placeholder="Digite seu nome" 
+                onChange={(e) => setNome(e.target.value)} 
+            />
+            <Label
+                htmlFor="telefone"
+                text="Telefone"
+            />              
+            <Input
+                text="telefone"
+                name="telefone" 
+                type="number" 
+                placeholder="Digite seu telefone"
+                onChange={(e) => setTelefone(e.target.value)}   
+            />
+            <Label
+                htmlFor="email"
+                text="Email"
+            />
+            <Input
+                text="email"
+                type="email" 
+                name="email" 
+                placeholder="Digite seu email"
+                onChange={(e) => setEmail(e.target.value)}
+            /> 
                 
-                <div>
-                    <Button text="Sing-up"/>
-                </div>
+            <DivBtnSingUp>
+                <Button text="Sing-up"/>
+            </DivBtnSingUp>
 
-                <div className={styles.textCenter}>
-                    <span className={styles.txt1}>Não possui conta? </span>
-                <a className={styles.txt2} href="#">
-                     Criar conta
-                </a>
-            </div>
+            <DivTextCenter>
+                <SpanText1>Não possui conta? </SpanText1>
+                <SpanText2 href="#">
+                    <span> Criar Conta</span>
+                </SpanText2>
+            </DivTextCenter>
 
             </form>
-      </div>
+    </DivCadastro>
 
-
-    
-
-        
-        
     </Container>
 
     </> 

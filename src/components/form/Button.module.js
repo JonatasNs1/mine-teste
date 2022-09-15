@@ -1,13 +1,14 @@
-.btnControle{
+import styled from 'styled-components'
+
+export const BtnControle = styled.div `
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 13px;
     margin-top: auto;
-  }
-  
-  .btnLogin {
-    font-size:1.5em;
+`;
+export const BtnLogin = styled.button`
+      font-size:1.5em;
     border: none;
     border-radius: 10px;
     color: #fff;
@@ -24,8 +25,8 @@
     background: -o-linear-gradient(to left, #21d4fd, #b721ff);
     background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
     background: linear-gradient(to left, #21d4fd, #b721ff);
-  }
-  
-  .btnLogin:hover {
     cursor: pointer;
-  }
+`;
+
+
+

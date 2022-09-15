@@ -1,9 +1,11 @@
-import styles from './Label.module.css'
+
+import { DivLabel, TextLabel } from './Label.module';
+
 function Label({text, nome}){
     return(
-        <div className={styles.label}>
-            <label htmlFor={nome}> {text}   </label>
-        </div>
+        <DivLabel >
+            <TextLabel htmlFor={nome}> {text}   </TextLabel>
+        </DivLabel>
     )
 }
 

@@ -1,14 +1,16 @@
-import styles from './Title.module.css';
+// import styles from './Title.module.css';
+import {Divtitle, TitleCadastro } from './Title.module';
 
 
 function Title({text,type}){
     return (
-        <div  className={`${styles.title} ${styles[type]}`}>
-            <h1 >
+        <Divtitle  >
+            <TitleCadastro type={type}>
                 {text}
-            </h1>
-        </div>
+           
+            </TitleCadastro>
+        </Divtitle>
     )
 }
-
+// className={`${styles.Divtitle} ${styles[type]}`}
 export default Title;

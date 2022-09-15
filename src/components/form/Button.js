@@ -1,11 +1,10 @@
-import styles from './Button.module.css';
-
+import {BtnControle,BtnLogin } from './Button.module';
 
 function Button ({text}){
     return (
-        <div className={styles.btnControle}>
-            <button className={styles.btnLogin}> {text} </button>
-        </div>
+        <BtnControle>
+            <BtnLogin > {text} </BtnLogin>
+        </BtnControle>
     )
 }
 

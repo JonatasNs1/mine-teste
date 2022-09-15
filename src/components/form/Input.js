@@ -1,15 +1,15 @@
-import styles from './Input.module.css';
-
+// import styles from './Input.module.css';
+import {DivInputs, Inputs } from './Input.module';
 function Input({ nome, type, placeholder, text, onChange}){
     return (
-        <div class={styles.dInputs}>
-             <input 
+        <DivInputs>
+             <Inputs 
                 text={text}
                 name={nome}
                 type={type}
                 placeholder={placeholder}
                 onChange={onChange} />
-        </div>
+        </DivInputs>
     )
 }
 
