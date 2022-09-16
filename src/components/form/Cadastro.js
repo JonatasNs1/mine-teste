@@ -48,9 +48,9 @@ function Cadastro() {
     function onSubmit(userData) {
         console.log(userData);
         //  e.preventDefault();
-        setUserNome(nome);
-        setUserTelefone(telefone);
-        setUserEmail(email);
+        setNome(nome);
+        setTelefone(telefone);
+        setEmail(email);
 
        alert(`
                 Seu nome é: ${userData.nome}
