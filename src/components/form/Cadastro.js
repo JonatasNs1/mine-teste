@@ -27,7 +27,7 @@ import * as yup from "yup";
 
 const schema = yup.object({
     nome: yup.string().required("O nome é obrigatório"),
-    telefone: yup.number().typeError("O telefone é obrigatório").min(12, 'O telefone tem que ter pelo menos 12 digitos').required(),
+    telefone: yup.number().typeError('O valor deve ser um número').required("O telefone é obrigatório").min(12, "O telefone tem que ter 12 digitos"),
     email: yup.string().email('Digite um email valido').required("O email é obrigatório"),
 }).required();
 
@@ -36,9 +36,7 @@ function Cadastro() {
     const [nome, setNome] = useState()
     const [telefone, setTelefone] = useState()
     const [email, setEmail] = useState()
-    const [userNome, setUserNome] = useState()
-    const [userTelefone, setUserTelefone] = useState()
-    const [userEmail, setUserEmail] = useState()
+
 
 
     const { register, handleSubmit, formState: { errors } } = useForm({
@@ -109,7 +107,6 @@ function Cadastro() {
                               
                               {...register("telefone", { required: true })}
                              nome="telefone"
-                             type="number"
                              placeholder="Digite seu telefone"
                            />
                      
