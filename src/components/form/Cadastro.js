@@ -27,7 +27,7 @@ import * as yup from "yup";
 
 const schema = yup.object({
     nome: yup.string().required("O nome é obrigatório"),
-    telefone: yup.string().required("O telefone é obrigatório").min(12, 'O telefone tem que ter pelo menos 12 digitos'),
+    telefone: yup.string().required("O telefone é obrigatório").min(11, 'O telefone tem que ter pelo menos 12 digitos'),
     email: yup.string().email('Digite um email valido').required("O email é obrigatório"),
 }).required();
 
